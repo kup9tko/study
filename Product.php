@@ -47,7 +47,7 @@ class Product extends Object
     }
 
     function getCategory(){
-        $sql = "SELECT DISTINCT name FROM " . "Category" . " " . "WHERE id=" . $this->category_id;
+        $sql = "SELECT name FROM " . "Category" . " " . "WHERE id=" . $this->category_id;
         $rs = $this->link->query($sql);
         return $rs->fetchAll(PDO::FETCH_ASSOC);
     }
@@ -59,7 +59,7 @@ class Product extends Object
     }
 
     function getUser(){
-        $sql = "SELECT DISTINCT name FROM " . "User" . " " . "WHERE id=" . $this->user_id;
+        $sql = "SELECT name FROM " . "User" . " " . "WHERE id=" . $this->user_id;
         $rs = $this->link->query($sql);
 
         return $rs->fetchAll(PDO::FETCH_ASSOC);

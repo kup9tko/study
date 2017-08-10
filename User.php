@@ -12,8 +12,10 @@ class User extends Object
     function findById($idu){
         $this->id = $idu;
         $sql = "SELECT * FROM " . $this->tableName . " " . "WHERE id=" . $idu;
-        $rs = $this->link->query($sql);
-        return $rs->fetchAll(PDO::FETCH_ASSOC);
+        return $this
+            ->link
+            ->query($sql)
+            ->fetchAll(PDO::FETCH_ASSOC);
     }
 
     function getProducts(){
