@@ -9,6 +9,10 @@ class Category extends Object
         $this->connect();
     }
 
+    /**
+     * @param $idc
+     * @return mixed
+     */
     function findById($idc){
         $this->id = $idc;
         $sql = "SELECT * FROM " . $this->tableName . " " . "WHERE id=" . $idc;
