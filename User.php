@@ -9,6 +9,10 @@ class User extends Object
         $this->connect();
     }
 
+    /**
+     * @param int $idu
+     * @return mixed
+     */
     function findById($idu){
         $this->id = $idu;
         $sql = "SELECT * FROM " . $this->tableName . " " . "WHERE id=" . $idu;
